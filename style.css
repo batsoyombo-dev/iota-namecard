@@ -23,7 +23,7 @@ body {
 }
 
 #logo {
-    width: 240px;
+    width: 15rem;
 }
 
 .container {
@@ -51,19 +51,19 @@ body {
 
 .name-container ul {
     list-style: none;
-    font-size: 20px;
+    font-size: 1.25em;
     width: 100%;
 }
 
 .name-container ul li {
-    margin: 12px 0;
+    margin: 1.25em 0;
     text-align: center;
 }
 
 .email-container {
-    font-size: 20px;
+    font-size: 1.25rem;
     order: 3;
-    padding: 10px 0;
+    padding: 0.625rem 0;
 }
 
 .name-container:hover,
