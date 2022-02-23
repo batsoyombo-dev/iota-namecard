@@ -1,0 +1,74 @@
+@font-face {
+    font-family: Gotham;
+    src: url(fonts/GothamBold.ttf);
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: Gotham;
+    src: url(fonts/GothamBook.ttf);
+    font-weight: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Gotham;
+}
+
+body {
+    background-color: #000;
+    color: white;
+}
+
+#logo {
+    width: 240px;
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.inner-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.name-container {
+    order: 2;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 300ms ease-in, opacity 150ms ease-in;
+    opacity: 0;
+    width: 100%;
+    display: flex;
+}
+
+.name-container ul {
+    list-style: none;
+    font-size: 20px;
+    width: 100%;
+}
+
+.name-container ul li {
+    margin: 12px 0;
+    text-align: center;
+}
+
+.email-container {
+    font-size: 20px;
+    order: 3;
+    padding: 10px 0;
+}
+
+.name-container:hover,
+.email-container:hover + .name-container {
+    max-height: 1000px;
+    opacity: 1;
+    border-top: 1px solid #FFFFFF;
+}
