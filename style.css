@@ -29,6 +29,10 @@ body {
     flex-direction: column;
 }
 
+.logo-container {
+    order: 1;
+}
+
 .name-container {
     order: 2;
     max-height: 0;
@@ -55,11 +59,24 @@ body {
     order: 3;
     padding: 0.625rem 0;
     height: 100%;
+    cursor: pointer;
 }
 
-.name-container:hover,
-.email-container:hover + .name-container {
+.inner-container:hover > .name-container {
     max-height: 1000px;
     opacity: 1;
     border-top: 1px solid #FFFFFF;
+}
+
+.hover {
+    max-height: 1000px;
+    opacity: 1;
+    border-top: 1px solid #FFFFFF;
+}
+
+@media (max-width: 768px) {
+    .name-container ul li,
+    .email-container {
+        font-size: 1rem;
+    }
 }
