@@ -211,7 +211,7 @@ a:hover {
 @media (max-width: 768px) {
     .name-container ul li,
     .email-container {
-        font-size: 1rem;
+        font-size: 0.75rem;
     }
     .logo-container {
         flex-direction: column;
@@ -226,5 +226,8 @@ a:hover {
     }
     .preloader-container p {
         font-size: 36px;
+    }
+    .bottom-logo-container {
+        opacity: 0;
     }
 }
