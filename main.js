@@ -2,6 +2,7 @@ const innerContainer = document.querySelector(".inner-container");
 const nameContainer = document.querySelector(".name-container");
 const aboutContainer = document.querySelector(".about-container");
 const contactContainer = document.querySelector(".contact-container");
+const introductionContainer = document.querySelector(".introduction-container");
 const emailContainer = document.querySelector(".email-container");
 const preloadContainer = document.querySelector(".preloader-container");
 const svgContainer = document.querySelector(".svg-container");
@@ -62,11 +63,16 @@ backContactBtn.addEventListener("click", (e) => {
   navigate(contactContainer, true);
 });
 
+introductionBtn.addEventListener("click", (e) => {
+  navigate(introductionContainer, true);
+});
+
 window.addEventListener("load", function () {
   preloadContainer.style.opacity = 1;
   this.setTimeout(function () {
     preloadContainer.style.opacity = 0;
     setTimeout(function () {
+      bottomLogoContainer.style.opacity = 1;
       preloadContainer.style.display = "none";
       innerContainer.style.opacity = 1;
       svgContainer.style.opacity = 1;
