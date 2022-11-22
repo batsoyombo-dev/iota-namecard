@@ -3,6 +3,7 @@ const nameContainer = document.querySelector(".name-container");
 const aboutContainer = document.querySelector(".about-container");
 const contactContainer = document.querySelector(".contact-container");
 const emailContainer = document.querySelector(".email-container");
+const preloadContainer = document.querySelector(".preloader-container");
 
 var isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
 
@@ -57,14 +58,13 @@ backContactBtn.addEventListener("click", (e) => {
   navigate(contactContainer, true);
 });
 
-if (isSafari) {
-    document.addEventListener("click", e => {
-        if (e.target.id === "container")
-            nameContainer.classList.remove("hover");
-    })
-    
-    innerContainer.addEventListener("click", () => {
-        nameContainer.classList.add("hover");
-        console.log("dwqwd");
-    });
-}
+window.addEventListener("load", function () {
+  preloadContainer.style.opacity = 1;
+  this.setTimeout(function () {
+    preloadContainer.style.opacity = 0;
+    setTimeout(function () {
+      preloadContainer.style.display = "none";
+      innerContainer.style.opacity = 1;
+    }, 2000);
+  }, 2000);
+}); 

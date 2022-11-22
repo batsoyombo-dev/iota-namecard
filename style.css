@@ -5,11 +5,13 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Gotham Light', sans-serif;
+    color: #a2a2a2;
 }
 
 body {
     background-color: #000;
     color: white;
+    overflow: hidden;
 }
 
 #logo {
@@ -27,6 +29,27 @@ body {
     display: flex;
     align-items: center;
     flex-direction: column;
+    transition: opacity 1s ease-in-out;
+    opacity: 0;
+}
+
+.preloader-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: opacity 2s ease-in-out;
+    opacity: 0;
+}
+
+.preloader-container p {
+    text-align: center;
+    font-size: 56px;
+}
+
+.preloader-container strong {
+    color: white;
+    font-weight: bold;
 }
 
 .logo-container {
@@ -35,6 +58,12 @@ body {
     gap: 20px;
     justify-content: center;
     margin-bottom: 50px;
+}
+
+.bottom {
+    order: 4;
+    margin-bottom: 0;
+    margin-top: 50px;
 }
 
 .name-container, 
@@ -75,10 +104,8 @@ body {
 }
 
 .email-container {
-    margin-top: 25px;
     font-size: 20px;
     order: 3;
-    padding: 0.625rem 0;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -99,12 +126,20 @@ body {
 button {
     cursor: pointer;
     background: none;
-    border: 0.5px solid white;
+    border: none;
     padding: 10px 20px;
-    border-radius: 10px;
     font-size: 20px;
     color: white;
     display: block;
+}
+
+button:hover {
+    font-weight: bold;
+    color: white;
+}
+
+.back-btn-container button {
+    border-top: 0.5px solid #f2f2f2;
 }
 
 .hover {
@@ -126,8 +161,8 @@ button {
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 75vw;
-    height: 75vw;
+    width: 130vh;
+    height: 130vh;
     z-index: -1;
     transform: translate(-50%, -50%);
 }
@@ -168,5 +203,8 @@ button {
     .svg-container {
         width: 100vh;
         height: 130vh;
+    }
+    .preloader-container p {
+        font-size: 36px;
     }
 }
